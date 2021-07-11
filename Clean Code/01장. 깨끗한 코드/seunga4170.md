@@ -14,7 +14,6 @@
 코드를 고칠 때마다 문제가 발생하고 이상한 코드가 늘어나면서 되돌릴 수 없게 된다. <br>
 또한, 생산성을 늘리려 프로젝트에 새 인력을 투입하게 된다. <br>
 이때 새 인력은 설계 의도에 대해 모르기 때문에 팀의 생산성을 높이지 못한 채 극심한 압력에 시달리게 될 것이고 생산성은 곧 0이 된다. <br>
-![생산성 vs 시간](https://www.google.com/url?sa=i&url=https%3A%2F%2F32kb.tistory.com%2F25&psig=AOvVaw0m6HeJ7eB7qJxHvqIqt8uU&ust=1626095260143000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJDJ_YWL2_ECFQAAAAAdAAAAABAJ)
 
 > 원대한 재설계의 꿈
 
