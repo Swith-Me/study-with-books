@@ -107,11 +107,7 @@ by _Ward Cunningham_
 
 #### "연습해, 연습!"
  
-
-
-
-
-
+_깨끗한 코드 by sxxrxm fin._
 
 
 
