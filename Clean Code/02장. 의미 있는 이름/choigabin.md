@@ -29,7 +29,7 @@ int fileAgeInDays;
 >
 > * 서로 흡사한 이름을 사용 X
 >   - EX) 'XYZControllerForEfficientHandlingOfStrings' | 'XYZConrollerForEfficientStorageOfStrings'
->     유사한 개념은 유사한 표기법을 사용 
+> * 유사한 개념은 유사한 표기법을 사용 
 
 #### 의미 있게 구분하라 
 > * 연속된 숫자를 덧붙이거나 불용어를 추가하는 방식은 금지 
