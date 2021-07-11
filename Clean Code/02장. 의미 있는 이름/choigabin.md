@@ -23,13 +23,13 @@ int fileAgeInDays;
 ~~~
 
 #### 그릇된 정보를 피하라 
-> 널리 쓰이는 의미가 있는 단어는 다른 의미로 사용 X <br>
-> * EX) hp, aix, sco 는 변수 이름으로 적합하지 않음 -> 유닉스 플랫폼, 유닉스 변종을 가르키는 이름이기 때문 <br>
->   직각삼각현의 빗변을 구현할 때, hp는 훌륭한 약어로 보일지라도 hp라는 변수는 독자에게 그릇된 정보를 제공 
+> * 널리 쓰이는 의미가 있는 단어는 다른 의미로 사용 X <br>
+>   - EX) hp, aix, sco 는 변수 이름으로 적합하지 않음 -> 유닉스 플랫폼, 유닉스 변종을 가르키는 이름이기 때문 <br>
+>     직각삼각현의 빗변을 구현할 때, hp는 훌륭한 약어로 보일지라도 hp라는 변수는 독자에게 그릇된 정보를 제공 
 
-> 서로 흡사한 이름을 사용 X
->  * EX) 'XYZControllerForEfficientHandlingOfStrings' | 'XYZConrollerForEfficientStorageOfStrings'
-> 유사한 개념은 유사한 표기법을 사용 
+> * 서로 흡사한 이름을 사용 X
+>   - EX) 'XYZControllerForEfficientHandlingOfStrings' | 'XYZConrollerForEfficientStorageOfStrings'
+>     유사한 개념은 유사한 표기법을 사용 
 
 #### 의미 있게 구분하라 
 > 연속된 숫자를 덧붙이거나 불용어를 추가하는 방식은 금지 
