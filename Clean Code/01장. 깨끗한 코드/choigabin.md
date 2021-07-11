@@ -16,8 +16,8 @@
  * 나쁜 코드는 __팀 생산성 저하의 원인__
  * 깨끗한 코드를 만드는 노력은 비용을 절감하고, 전문가로 살아남는 길 
  * 나쁜 코드는 업무 속도를 늦추는 원인 
-   - 빨리 가는 방법은, 언제나 코드를 최대한 깨끗하게 유지하는 습관 
- ![image](https://blog.kakaocdn.net/dn/cH8o5U/btqCNak0ILO/LqKsWlpZLCkk8gjX0YNsH1/img.jpg)
+   - 빨리 가는 방법은, 언제나 코드를 최대한 깨끗하게 유지하는 습관 <br>
+ <img src="https://blog.kakaocdn.net/dn/cH8o5U/btqCNak0ILO/LqKsWlpZLCkk8gjX0YNsH1/img.jpg" width="400px" height="221px"></img><br/>
   
 #### 깨끗한 코드
  * __코드 감각__ 
