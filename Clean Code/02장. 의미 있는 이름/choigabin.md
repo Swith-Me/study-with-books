@@ -9,6 +9,15 @@
 > * 수행 기능? <br>
 > * 사용 방법? <br>
 
+아무 의미도 드러나지 않는 이름 d
 ~~~
 int d; //경과 시간 (단위: 날짜)
+~~~
+
+명확한 의미를 가진 이름을 사용 -> 코드 이해와 변경에 유용 
+~~~
+int elapsedTimeInDays;
+int daysSinceCreation;
+int daySinceModification;
+int fileAgeInDays;
 ~~~
