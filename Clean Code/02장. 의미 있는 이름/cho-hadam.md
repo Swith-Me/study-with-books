@@ -169,3 +169,21 @@ Complex fulcrumPoint = new Complex(23.0);
 firstName, lastName, street, houseNumber, city, state, zipcode
 addrFirstName, addrLastName, addrState...
 ```
+
+<br />
+
+### 몰랐던 것
+
+**elapse** (시간이) 흐르다
+
+**불용어** 인터넷 검색 시 검색 용어로 사용하지 않는 단어
+
+**JobQueue** 실행할 작업들을 적재하는 큐
+
+<br />
+
+## 기억에 남은 부분
+
+> _좋은 이름을 지으려면 시간이 걸리지만 좋은 이름으로 절약하는 시간이 훨씬 더 많다._
+
+> _따로 주석이 필요하다면 의도를 분명히 드러내지 못했다는 말이다._
