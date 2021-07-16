@@ -256,7 +256,7 @@ public class Address {
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
-  }
+  	}
 
 	public String getStreet() {
 		return street;
