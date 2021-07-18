@@ -60,6 +60,7 @@ if (employee.isEligibleForFullBenefits())
 - 함수 헤더
 - 비공개 코드에서 Javadocs
 
+
 - 기억에 남는 구절 📖
 
 > 위와 같은 주석은 지나친 참견이라 개발자가 주석을 무시하는 습관에 빠진다.
