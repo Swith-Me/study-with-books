@@ -51,44 +51,123 @@ public List<RecordGrip> retrieveSection(String sectionName) {
 <br><br>
 
 ## III. 미확인 예외를 사용하라
-확인된 예외란? 
+```
+확인된 예외란❓
+메서드 선언 단계에서 메서드가 반환할 예외를 모두 열거하는 것
+```
+확인된 예외는 안정적인 소프트웨어를 제작하는 요소로 필요하지 않다
+   - **OCP**를 위반하기 때문
+     - 즉 하위 단계의 오류를 해결하기 위해 최상위 단계 선언부까지 수정해야 한다
+     - 캡슐화가 깨진다
+
+  - 애플리케이션은 일반적으로 **의존성** > 확인된 예외
+    - 아주 중요한 라이브러리일 경우엔, 확인된 예외도 유용  <br><br> 
+
+###### ❓ OCP | Open Close Principle, 기존의 코드를 변경하지 않으면서 기능을 추가할 수 있도록 설계되는 것
 
 <br><br>
 
 ## IV. 예외에 의미를 제공하라
+> 예외를 던질 때는 **정보, 전후 상황**을 충분히 덧붙인다.
 
+➔ 오류가 발생한 원인과 위치를 찾기가 쉬워진다.
 
 <br><br>
 
 ## V. 호출자를 고려해 예외 클래스를 정의하라
+오류를 정의, 분류할 때 가장 중요한 것은 **오류를 잡아내는 방법**이다
+예외에 대응하는 방식은 <br>
+1. 오류를 기록한다
+2. 프로그램을 계속 수행해도 좋은지 확인한다
 
+가 대부분인데, 이때 **외부 API 감싸기 기법**을 사용하라
 
-<br><br>
+#### 외부 API 감싸기 기법의 장점
+
+- 외부 라이브러리와 프로그램 사이의 의존성이 줄어든다
+- 라이브러리 변경이 간편하다
+- 프로그램 테스트에 용이하다
+- 설계 방식에 상관없이 편리하게 API를 사용할 수 있다
+
+<br>
 
 ## VI. 정상 흐름을 정의하라
+```java
+// 비용 청구 시스템의, 총계를 계산하는 코드
+// 👎 예외가 논리를 따라가기 어렵게 만든다
+try {
+  MealExpenses expenses = expenseReportDAO.getMeals(employee.getID());
+  m_total += expenses.getTotal();
+} catch(MealExpensesNotFound e) {
+  m_total += getMealPerDiem();
+}
+```
 
+➔ **특수 상황을 처리할 필요가 없도록 코드를 간결해지게 하라**
+
+```java
+MealExpenses expenses = expenseReportDAO.getMeals(employee.getID());
+m_total += expenses.getTotal();
+```
+
+### 특수 사례 패턴
+> 클래스를 만들거나 객체를 조작해 특수 사례를 처리하는 방식
+
+➔ 예외적인 상황을 캡슐화해서 처리 <br>
+➔ 클라이언트 코드가 예외적인 상황을 처리할 필요가 없어진다 
+```java
+public class PerDiemMealExpenses implements MealExpenses {
+  public int getTotal() {
+    // 기본값으로 일일 기본 식비를 반환한다
+  }
+}
+```
 
 <br><br>
 
 ## VII. null을 반환하지 마라
+```java
+// 나쁜 코드👎 
+public void registerItem(Item item) {
+  if (item != null) {
+    ItemRegistry registry = persistentStore.getItemRegistry();
+    if (registry != null) {
+      ...
+    }
+  }
+}
+```
+위와 같은 null 반환은
+- 일거리를 늘린다
+- 호출자에게 문제를 떠넘긴다
+- 한 번이라도 null 확인을 빼먹으면 오류(NullPointerException)가 발생한다 <br><br>
 
-
+🛠 **개선 방안** <br>
+ - 외부 API로 null을 반환하는 감싸기 메서드 사용 <br>
+ -  특수 사례 객체 반환 <br>
+ - 꼭 필요하지 않다면 null 반환은 생략
  
-<br><br>
+<br>
 
 ## VIII. null을 전달하지 마라
+> 대다수 프로그래밍 언어는 호출자가 실수로 넘기는 null을 적절히 처리하는 방법이 없다.
 
+정상적인 인수로 null을 기대하는 API가 아니라면 메서드로 null을 전달하는 코드는 최대한 피한다 <br>
 
-<br><br>
+- 새로운 예외 유형 생성 후 던지기
+- assert 문 사용 (InvalidArgumentException 예외 처리) <br><br><br>
 
 ## IX. 결론
-
+> **오류 처리를 프로그램 논리와 독자적인 사안으로 고려하자.** <br>
+> 이 둘을 분리하면 독립적인 추론이 가능해지면서 유지보수성이 높은, 튼튼하고 깨끗한 코드를 작성할 수 있다.
    
 <br>
 
 ***
 
-⚡ 
+⚡ **깨끗한 코드는 읽기도 좋아야 하지만 안전성도 높아야 한다.**
+
+<br>
 
 
 
