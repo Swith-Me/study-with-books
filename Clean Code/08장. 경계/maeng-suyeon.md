@@ -10,7 +10,32 @@
 
 이런 긴장으로 인해 시스템 경계에서 문제가 생길 소지가 많다.
 
-[Map이 제공하는 메서드](https://www.notion.so/23669f3203d34de0b3c28a017265e4e7)
+|Map이 제공하는 메서드|
+|-----------------|
+clear() void – Map
+containsKey(Object key) boolean – Map
+containsValue(Object value) boolean – Map
+clear() void – Map
+containsKey(Object key) boolean – Map
+containsValue(Object value) boolean – Map
+entrySet() Set – Map
+equals(Object o) boolean – Map
+get(Object key) Object – Map
+getClass() Class<? extends Object> – Object
+hashCode() int – Map
+isEmpty() boolean – Map
+keySet() Set – Map
+notify() void – Object
+notifyAll() void – Object
+put(Object key, Object value) Object – Map
+putAll(Map t) void – Map
+remove(Object key) Object – Map
+size() int – Map
+toString() String – Object
+values() Collection – Map
+wait() void – Object
+wait(long timeout) void – Object
+wait(long timeout, int nanos) void – Object
 
 예제
 
@@ -50,7 +75,7 @@ public class Sensors {
 
 외부 코드를 익히기도, 통합하기도 어렵지만, **간단한 테스트 케이스**를 작성해 외부 코드를 익힐 수 있다.
 
-이를 **짐 뉴커크(Jim Newkirk)**는 **학습 테스트**라 부른다.
+이를 **짐 뉴커크; Jim Newkirk**는 **학습 테스트**라 부른다.
 
 학습 테스트는 
 
