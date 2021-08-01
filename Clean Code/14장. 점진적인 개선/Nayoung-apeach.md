@@ -1,6 +1,6 @@
 # 14. 점진적인 개선🎡
 
-### Args 구현
+### Args구현
 
 ```java
 package com.objectmentor.utilities.args;
