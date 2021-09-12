@@ -197,7 +197,7 @@
 
 - robots.txt 파일과 상호작용하는 공개된 펄 라이브러리
 - RobotRules 객체 만들기
-  : ```$rules = WWW::RobotRules->new($robot_name);
+  : `$rules = WWW::RobotRules->new($robot_name);`
 - robots.txt 파일 로드하기
   : `$rules->parse($url,$content,$fresh_until);`
 - 사이트 URL을 가져올 수 있는지 검사
